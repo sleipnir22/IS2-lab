@@ -85,13 +85,14 @@ class Pool:
 GENES = "".join(
     map(
         lambda x, y: x + y, 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ',
-                            'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+                            'абвгдеёжзийклмнопрстуфхцчшщъыьэюя',
+
     )
 )
 
 if __name__ == '__main__':
     word = input()
-    #   Размер популяции, слово, набор ген
+    #   Размер популяции, слово, набор генов
     breed_pool = Pool(100, word, GENES)
     steps = breed_pool.evolution()
     print(f"Steps: {steps}")
